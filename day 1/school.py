@@ -1,7 +1,41 @@
-students = []
+students = [
+    {
+        "name": "brad pitt",
+        "id": "stu1",
+        "age": 62,
+        "math_score": 75.0,
+        "english_score": 87.0,
+        "science_score": 54.0
+    },
+    {
+        "name": "Donald Trump",
+        "id": "presido1",
+        "age": 88,
+        "math_score": 76.0,
+        "english_score": 33.0,
+        "science_score": 84.0
+    },
+    {
+        "name": "kavin hart",
+        "id": "tall",
+        "age": 2,
+        "math_score": 43.0,
+        "english_score": 75.0,
+        "science_score": 11.0
+    },
+    {
+        "name": "Rick Ross",
+        "id": "best",
+        "age": 66,
+        "math_score": 100.0,
+        "english_score": 100.0,
+        "science_score": 100.0
+    }
+]
 
 def average(math, english, science):
-    return (math+english+science)/3
+    ave = (math+english+science)/3
+    return round(ave, 2)
 
 
 def grade(math, english, science):
@@ -246,14 +280,15 @@ Grade: {grade(top['math_score'], top['english_score'], top['science_score'])}
                         for student in students:
                             if student["id"] == id:
                                 students.remove(student)
+                                print(f'{student['name']} deleted')
                                 break
                     elif confirm == 'no':
                         break
                     else:
                         print("invalid input ")
                         break
-            else:
-                print("student not found")
+            # else:
+            #     print("student not found")
         elif (choice == 7):
             break
         else:
