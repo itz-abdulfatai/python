@@ -9,11 +9,11 @@ class Point:
     def draw(self):
         print("draw")
 
+class SubPoint(Point):
+    def innter(self):
+        print("inner")
 
 point1 = Point(3,5)
 
 print(point1.x)
 
-
-class SubPoint(Point):
-    pass
